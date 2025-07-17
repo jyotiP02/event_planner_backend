@@ -7,7 +7,11 @@ import sqlite3
 from datetime import datetime
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True, origins=["http://localhost:3000"])
+CORS(app, supports_credentials=True, origins=[
+    "http://localhost:3000",  # local testing
+    "https://your-frontend.vercel.app",  # replace after frontend deploy
+    "https://your-backend-service.onrender.com"  # actual Render domain
+])
 
 # 🔐 Config
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
