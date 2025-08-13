@@ -8,9 +8,8 @@ from datetime import datetime
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True, origins=[
-    "http://localhost:3000",  # local testing
-    "https://your-frontend.vercel.app",  # replace after frontend deploy
-    "https://your-backend-service.onrender.com"  # actual Render domain
+    "https://planner-frontend-06ok.onrender.com/",
+    "http://localhost:3000"
 ])
 
 # 🔐 Config
